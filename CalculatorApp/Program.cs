@@ -71,7 +71,7 @@ namespace CalculatorApp
                         ConsoleWorker.UpdateLine(2, "Вернуться к выбору типа калькулятора нажмите b ");
                         ConsoleWorker.UpdateLine(3, "Вы выбрали: Scientific Calculator");
 
-                        //
+                        Task.Run(() => CalculatorScientific.OnKeypress()).Wait();
 
                         // after exit Task
                         calculatorType = CalculatorTypeEnum.None;
